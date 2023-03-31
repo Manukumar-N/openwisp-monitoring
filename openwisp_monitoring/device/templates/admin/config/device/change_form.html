@@ -24,6 +24,14 @@
                   </div>
               </div>
               {% endif %}
+                {% if device_data.general.uptime %}
+              <div class="form-row">
+                  <label>{% trans 'StartTime' %}:</label>
+                  <div class="readonly">
+                      {{ device_data.general.uptime }}
+                  </div>
+              </div>
+              {% endif %}
               {% endif %}
               {% if device_data.resources %}
               {% if device_data.resources.load or device_data.resources.cpus %}
